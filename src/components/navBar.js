@@ -1,28 +1,36 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 class NavBar extends Component {
+
   render () {
+
     return (
       <nav className="nav-extended">
         <div className="nav-wrapper red">
           <a href="#!" className="brand-logo">Logo</a>
           <ul className="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
+            {this.props.categories.map((category,index) => (
+              <li key={index}><Link to={`/${category.name}`}>{category.name}</Link></li>
+            ))}
           </ul>
         </div>
         <div className="nav-content">
           <ul className="tabs tabs-transparent red hide-on-large-only">
-            <li className="tab"><a href="sass.html">Sass</a></li>
-            <li className="tab"><a href="sass.html">Components</a></li>
-            <li className="tab"><a href="sass.html">Javascript</a></li>
+            {this.props.categories.map((category,index) => (
+              <li className="tab" key={index}><Link to={`/${category.name}`}>{category.name}</Link></li>
+            ))}
           </ul>
         </div>
       </nav>
-      
+
     )
   }
 }
 
-export default NavBar;
+const mapStateToProps = (state) => ({
+    categories: state.Category.categories,
+})
+
+export default connect(mapStateToProps)(NavBar)

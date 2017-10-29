@@ -12,14 +12,14 @@ class PostListView extends Component {
   componentDidMount() {
     requestPosts().then(posts => this.props.dispatch(getAllPosts(posts)))
   }
-
+  
   render () {
     const Posts = this.props.match.params.category ?
       this.props.Posts[this.props.match.params.category] :
       this.props.Categories.reduce((acc,curr) =>{
         return acc.concat(this.props.Posts[curr.path])
       }, [])
-      
+
     return (
       <div>
         <SortSelect/>
