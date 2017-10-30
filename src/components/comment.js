@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import TimeStamp from 'react-timestamp'
 
 class Comment extends Component {
   render () {
@@ -8,15 +9,15 @@ class Comment extends Component {
           <a className="btn-flat medium">
             <i className="material-icons">expand_less</i>
           </a>
-          <span id="comment-vote">100</span>
+          <span id="comment-vote">{this.props.comment.vote}</span>
             <a className="btn-flat medium">
               <i className="material-icons">expand_more</i>
             </a>
         </div>
         <div className="col s10 m11">
-          <h5 id="comment-body">Hi This is a Comment</h5>
+          <h5 id="comment-body">{this.props.comment.content}</h5>
           <div>
-            <span id="comment-author">Admin</span> posted on <span id="comment-date">20 Dec, 2016</span>
+            <span id="comment-author">{this.props.comment.author}</span> posted on <span id="comment-date"><TimeStamp time={this.props.comment.time} format='date'/></span>
               <div className="comment-edit right">
                 <a href="">
                     <i className="material-icons grey-text text-darken-2">edit</i>

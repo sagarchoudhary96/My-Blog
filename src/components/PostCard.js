@@ -14,7 +14,7 @@ class PostCard extends Component {
                 <h5 className="postcard-title"><Link to={`/${post.category}/${post.id}`}>{post.title}</Link></h5>
                 <span className="badge blue white-text">{post.category}</span>
                 <div className="chip postcard-author">
-                  <img src="images/yuna.jpg" alt="Contact Person"/>
+                  <img src="/images/yuna.jpg" alt="Contact Person"/>
                   {post.author}
                 </div>
                 <div className="row">
@@ -39,7 +39,7 @@ class PostCard extends Component {
                     <Link to='/'><i className="material-icons small right postcard-edit black-text">edit</i></Link>
                 </div>
                 {this.props.match.params.id &&(
-                  <Comments/>
+                  <Comments id= {this.props.post.id}/>
                 )}
             </div>
           </div>

@@ -12,7 +12,7 @@ class PostListView extends Component {
   componentDidMount() {
     requestPosts().then(posts => this.props.dispatch(getAllPosts(posts)))
   }
-  
+
   render () {
     const Posts = this.props.match.params.category ?
       this.props.Posts[this.props.match.params.category] :
@@ -22,15 +22,18 @@ class PostListView extends Component {
 
     return (
       <div>
+      {!this.props.match.params.id && (
         <SortSelect/>
+      )}
         {Posts.map(post => (
           <PostCard post = {post} key={post.id}/>
         ))}
 
-        {this.props.match.params.id &&(
+        {this.props.match.params.id ?
           <HomeButton/>
-        )}
-        <AddPostButton/>
+          : <AddPostButton/>
+        }
+
       </div>
     )
   }

@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom'
 class AddPostButton extends Component {
   render () {
     return (
       <div className="fixed-action-btn">
-        <a className="btn-floating btn-large red waves-effect">
+        <Link className="btn-floating btn-large red waves-effect" to='/post/add/new'>
           <i className="large material-icons">add</i>
-        </a>
+        </Link>
       </div>
     )
   }

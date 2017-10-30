@@ -9,7 +9,7 @@ class NavBar extends Component {
     return (
       <nav className="nav-extended">
         <div className="nav-wrapper red">
-          <a href="#!" className="brand-logo">Logo</a>
+          <Link to='/' className="brand-logo">Logo</Link>
           <ul className="right hide-on-med-and-down">
             {this.props.categories.map((category,index) => (
               <li key={index}><Link to={`/${category.name}`}>{category.name}</Link></li>
