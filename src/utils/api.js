@@ -93,7 +93,7 @@ export const editComment = (id, content) =>
       ...headers,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(comment)
+    body: JSON.stringify(content)
   }).then(result => result.json())
 
 // Delete comment
@@ -103,7 +103,7 @@ export const deleteComment = (id) =>
     headers: {
       ...headers,
       'Content-Type': 'application/json'
-  }).then(result => result.json())
+  }}).then(result => result.json())
 
 // Vote Comment
 export const voteComment = (id, vote) => {
