@@ -20,3 +20,7 @@ Users will also be able to edit and delete posts and comments.
   - `cd` into **Frontend-Blog** Directory and use `npm start run` to start the app.
   
 3. App can be seen at: `localhost:3000`
+
+## create-react-app
+
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
