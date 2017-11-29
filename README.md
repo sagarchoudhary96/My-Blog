@@ -19,4 +19,4 @@ Users will also be able to edit and delete posts and comments.
 - To run the **App**: 
   - `cd` into **Frontend-Blog** Directory and use `npm start run` to start the app.
   
-4. App can be seen at: `localhost:3000`
+3. App can be seen at: `localhost:3000`
