@@ -71,7 +71,7 @@ class Comment extends Component {
                 : <h5 id="comment-body">{comment.body}</h5>
             }
             <div>
-              <span id="comment-author">{comment.author}</span>
+              <span id="comment-author">{comment.author} </span>
               posted on
               <span id="comment-date"><TimeStamp time={comment.time} format='date'/></span>
               <div className="comment-edit right">
