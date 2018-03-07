@@ -1,5 +1,5 @@
 # My-Blog 
-### [Live Version](http://bit.do/my-blog-react)
+### [Live Version](http://bit.do/my-react-blog)
 
 A React blog Web App built using react and redux. Users will be able to post content to predefined categories, comment on their posts and other users' posts, and vote on posts and comments. 
 Users will also be able to edit and delete posts and comments.
